@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+    {% block title %}<title>Ceres project references</title>{% endblock %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Add additional CSS in static file -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  </head>
+  <body>
+      <h1>References</h1>
+      <ul>
+          <li>Paper Edgar</li>
+          <li>Paper Apoorva 1</li>
+          <li>Paper Apoorva 2</li>
+      </ul>
+      
+      <br>
+      
+      <h1>Emision limits</h1>
+      <p>Phosphorus emission limits considered is 100 &#956g P-PO<sub>4</sub><sup>3-</sup>/L for non-direct discharches in waterbodies, and a limit of 50 &#956g P-PO<sub>4</sub><sup>3-</sup>/L for direct waterbodies discharges, following the consideration reported in the Agricultural waste Management Field Handbook (US Department of Agriculture, 2008). This threshold was suggested in the Quality Criteria for Water Report (1986) by the US Environmental Agency. </p>
+      
+      <h1>Economic considerations</h1>
+      <ul>
+        <li>Benefits from nutrients recovered using filtration are null due to the nutrients are recovered within the filtration media, which is long-term replaced</li>
+        <li>Benefits from nutrients recovered in struvite form are calculated a struvite price of 0.85 USD/kg (Economic Feasibility Study for Phosphorus Recovery Processes, doi:10.1007/s13280-010-0101-9). Additionally, the HAP recovered is considered that can be included in the struvite product selled OJO HAY QUE CORREGIR PRECIO STRUVITA CSTR</li>
+        <li>Biogas price stimated is 0 if it is not upgraded</li>
+        <li>Discount rate considered in the NPX estimation is 7% (AMPC)</li>
+      </ul>
+    
+      <br>
+      
+      <p>Back to <a href="{% url 'index' %}">Ceres project</a></p>
+  </body>
+</html>

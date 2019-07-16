@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block title %}<title>Ceres project</title>{% endblock %}
+    <meta charset="utf-8">
+    <title>Ceres Project</title>
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<!--     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+<!--     <link rel="stylesheet" href="main.css"> -->
+    <!-- Add additional CSS in static file -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<!--     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
+  </head>
+  <body>
+   <div class="container-fluid">
+    <div class="row">
+      <div class="sidebar"> 
+      {% block sidebar %}
+        <ul class="sidebar-nav">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'techlist' %}">Library of Technologies</a></li>
+          <li><a href="{% url 'references' %}">References</a></li>
+        </ul>
+     {% endblock %}
+      </div>
+      <div class="col-sm-10 ">
+      {% block content %}{% endblock %}
+      
+      {% block pagination %}
+        {% if is_paginated %}
+            <div class="pagination">
+                <span class="page-links">
+                    {% if page_obj.has_previous %}
+                        <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}">previous</a>
+                    {% endif %}
+                    <span class="page-current">
+                        <p>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</p>
+                    </span>
+                    {% if page_obj.has_next %}
+                        <a href="{{ request.path }}?page={{ page_obj.next_page_number }}">next</a>
+                    {% endif %}
+                </span>
+            </div>
+        {% endif %}
+    {% endblock %} 
+    </div>
+</div>
+</div>
+</body>
+</html>
+<!--  
+  
+  
+  
+  <body>
+      <img id="EPA-logo-non-offcial" src="images/epa-nonof.jpg" alt="EPA logo non-offcial">
+      <h1 class="description">Ceres project</h1>
+      <p class="description" id="description">Ceres_Filtration_v1.
+          Tool for selection of nutrients recovery technologies.
+          Edgar Martín Hernández.
+          Cincinnati 2019.</p>
+      <h2 id="user-req">User requierements</h2>
+      <h3 class="user-items" id="economic-item">Economc requirements</h3>
+      <button id="budget-but">Budget</button>
+      <p id="budget-value"></p>
+      <h3>Raw material composition</h3>
+      <ul>
+          <li>Water</li>
+          <li>OM</li>
+          <li>P</li>
+          <li>N</li>
+      </ul>
+      <h2 id="ref">References</h2>
+      <a href="references.html">References</a> 
+      <script src="scripts/main.js"></script>
+  </body>
+</html>-->

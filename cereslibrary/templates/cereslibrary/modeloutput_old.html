@@ -1,0 +1,69 @@
+ {% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Model output</h1>
+<!--    <p><strong>Author:</strong> <a href="">{{ book.author }}</a></p>-->
+<!-- author detail link not yet defined -->
+<!-- <p><strong>Budget:</strong> {{ budget_output }}</p> -->
+<p><h3>Technology: {{ tech_AD }} </h3> </p>
+
+{% if AD_decision == True %}
+    <p><strong>Investment cost (USD):</strong> {{ investment_cost_AD }}</p>
+    <p><strong>Operation cost (USD/year):</strong> {{ operation_cost_AD }}</p>
+    {% autoescape off %}{{ fc_AD }}{% endautoescape %}
+    <!-- <p><strong>AD decision:</strong> {{ AD_decision }}</p> -->
+{% endif %}
+
+<br>
+<hr>
+<br>
+
+<br/>
+<p><h3>Technology: {{ tech_SP }} </h3> </p>
+<p><strong>Investment cost (USD):</strong> {{ investment_cost_SP }}</p>
+<p><strong>Operation cost (USD/year):</strong> {{ operation_cost_SP }}</p>
+{% autoescape off %}{{ fc_SP }}{% endautoescape %}
+
+<br>
+<hr>
+<br>
+
+<br/>
+<p><h3>Technology: {{ tech_FI }} </h3> </p>
+<p><strong>Status (investment cost):</strong> {{ investment_cost_status_FI }}</p>
+<p><strong>Status (operation cost):</strong> {{ operation_cost_status_FI }}</p>
+<p><strong>Investment cost (USD):</strong> {{ investment_cost_FI }}</p>
+<p><strong>Operation cost (USD/year):</strong> {{ operation_cost_FI }}</p>
+{% autoescape off %}{{ fc_FI }}{% endautoescape %}
+{% autoescape off %}{{ p_FI }}{% endautoescape %}
+
+<br>
+<hr>
+<br>
+
+<br/>
+<p><h3>Technology: {{ tech_FBR }} </h3> </p>
+<p><strong>Investment cost (USD):</strong> {{ investment_cost_FBR }}</p>
+<p><strong>Operation cost (USD/year):</strong> {{ operation_cost_FBR }}</p>
+{% autoescape off %}{{ fc_FBR }}{% endautoescape %}
+{% autoescape off %}{{ p_FBR }}{% endautoescape %}
+
+<br>
+<hr>
+<br>
+
+<br/>
+<p><h3>Technology: {{ tech_CSTR }} </h3> </p>
+<p><strong>Investment cost (USD):</strong> {{ investment_cost_CSTR }}</p>
+<p><strong>Operation cost (USD/year):</strong> {{ operation_cost_CSTR }}</p>
+{% autoescape off %}{{ fc_CSTR }}{% endautoescape %}
+{% autoescape off %}{{ p_CSTR }}{% endautoescape %}
+
+<br>
+<hr>
+<br>
+
+
+
+
+{% endblock %}

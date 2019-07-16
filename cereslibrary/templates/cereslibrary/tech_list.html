@@ -1,0 +1,18 @@
+ 
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Technologies List</h1>
+  {% if tech_list %}
+  <ul>
+    {% for tech in tech_list %}
+      <li>
+        <a href="{{ tech.get_absolute_url }}">{{ tech.title }}</a>. Product: {{tech.get_product_display}}
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no technologies in the library.</p>
+  {% endif %}     
+  <p>Back to <a href="{% url 'index' %}">Ceres project</a></p>
+{% endblock %}

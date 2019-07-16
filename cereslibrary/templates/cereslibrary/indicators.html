@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="http://cdn.pydata.org/bokeh/release/bokeh-1.1.0.min.css"/>
+        <link rel="stylesheet" type="text/css" href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.1.0.min.css"/>
+        <link rel="stylesheet" type="text/css" href="http://cdn.pydata.org/bokeh/release/bokeh-tables-1.1.0.min.css"/>        
+    </head>
+    {% load static %}
+
+    <body>
+        <h1>Indicators</h1>
+        
+        <h2>Geografical constraints</h2>
+        
+        <p>The facility is located in the following watershed (HUC8 resolution): {{HUC8ContPoint}} </p>
+        <p>Watershed eutrophication risk: {{eutrophication_risk}} </p>
+        <p>The facility after-treatment streams release is {{P_emission_mode}} &#8594 Phosphate as P (P-PO<sub>4</sub><sup>3-</sup>) emission limit: {{P_emission_limit}} &#956g/L </p>
+
+        <p>
+        <h3>Total phosphorus concentration in watersheds at HUC8 resolution (&#956g/L)</h3> 
+        <p><strong>Total phosphorus concentration in HUC8 {{HUC8ContPoint}} watershed:</strong> {{ TP_GIS }} (&#956g/L)</p>
+        <img id="TP" src="{% static 'images/NARS_NLA_FINAL_P.png' %}" alt="TP" width="683" height="383"/> 
+        </p>
+
+
+        <p>
+        <h3>Ammonia concentration in watersheds at HUC8 resolution (mg/L)</h3> 
+        <p><strong>Ammonia concentration in HUC8 {{HUC8ContPoint}} watershed:</strong> {{ NH4_GIS }} (mg/L)</p>
+        <img id="NH4" src="{% static 'images/NARS_NLA_FINAL_N.png' %}" alt="NH4" width="683" height="383"/> 
+        </p>
+
+        <br/>
+        <p><h3>Phosphorus recovery parameters</h3> </p>
+        {% autoescape off %}{{ resultsP }}{% endautoescape %}
+        
+        {% autoescape off %}{{ results_summary }}{% endautoescape %}
+        
+        <br/>
+        {{ div|safe }}
+
+
+    </body>
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="http://cdn.pydata.org/bokeh/release/bokeh-1.1.0.min.css"/>
+        <link rel="stylesheet" type="text/css" href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.1.0.min.css"/>
+        <link rel="stylesheet" type="text/css" href="http://cdn.pydata.org/bokeh/release/bokeh-tables-1.1.0.min.css"/>        
+    </head>
+     <body>
+        {{ div | safe }}
+    </body>-->
+   
+        <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-1.1.0.min.js"></script>
+        <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.1.0.min.js"></script>
+        <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-tables-1.1.0.min.js"></script>
+        <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-api-1.1.0.min.js"></script> 
+        {{ script | safe }}
+</html>

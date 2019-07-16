@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Ceres Project</title>
+        <!-- Add additional CSS in static file -->
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400">
+    </head>
+    
+    <body>
+        <h1>Index</h1>
+        
+        <li><a href="{% url 'modeloutput' %}">Mass balances</a></li>
+        <li><a href="{% url 'designoutput' %}">Design</a></li>
+        <li><a href="{% url 'economic_eval' %}">Economic evaluation</a></li>
+        <li><a href="{% url 'indicators' %}">Indicators</a></li>
+    </body>
+</html>
+

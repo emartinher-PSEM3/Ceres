@@ -1,0 +1,60 @@
+ {% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+    <h1>Preliminary design</h1>
+
+<br/>
+<!-- <div> -->
+<p>
+<h3>Technology: {{ tech_SP }} </h3> 
+<img id="screw_press" src="{% static 'images/screw_press.jpg' %}" alt="screw_press" width="448" height="246.33"/> <!--style="float: right; margin-right: 10px; margin-bottom: 10px;"-->
+</p>
+<!-- </div> -->
+
+<p><strong>Number of units:</strong> {{ n_units_SP }}</p>
+<p><strong>Size (diameter) (m):</strong> {{ size_SP }}</p>
+<p><strong>Power (kW):</strong> {{ energy_SP }}</p>
+
+<br>
+<hr>
+<br>
+
+<p>
+<h3>Technology: {{ tech_FI }} </h3> 
+<img id="filter" src="{% static 'images/filter.png' %}" alt="filter" width="448" height="246.33"/> <!--style="float: right; margin-right: 10px; margin-bottom: 10px;"-->
+</p>
+
+<p><strong>Number of units:</strong> {{ n_units_FI }}</p>
+<p><strong>Filter type:</strong> {{ type_FI }}</p>
+<p><strong>Filtration media:</strong> {{ media_FI }}</p>
+<p><strong>Status (investment cost):</strong> {{ investment_cost_status_FI }}</p>
+<p><strong>Status (operation cost):</strong> {{ operation_cost_status_FI }}</p>
+
+<p>
+<h3>Technology: {{ tech_FBR }} </h3> 
+<img id="FBR" src="{% static 'images/FBR2.png' %}" alt="FBR" width="448" height="283.0"/> <!--style="float: right; margin-right: 10px; margin-bottom: 10px;"-->
+</p>
+
+<p><strong>Number of units:</strong> {{ n_units_FBR }}</p>
+<p><strong>Size:</strong> {{ FBR_size }}</p>
+
+<p>
+<h3>Technology: {{ tech_CSTR }} </h3> 
+<img id="CSTR" src="{% static 'images/CSTR.png' %}" alt="CSTR" width="448" height="227.41"/> <!--style="float: right; margin-right: 10px; margin-bottom: 10px;"-->
+</p>
+
+<p><strong>Number of units CSTR:</strong> {{ n_units_CSTR }}</p>
+<p><strong>Size CSTR (volume) (m3):</strong> {{ CSTR_size }}</p>
+<p><strong>Number of units clarifier:</strong> {{ n_units_Clarifier }}</p>
+<p><strong>Size clarifier (volume) (m3):</strong> {{ Clarifier_size }}</p>
+<p><strong>Number of units belt filter:</strong> {{ n_units_BeltFilt }}</p>
+<p><strong>Size belt filter (area) (m2):</strong> {{ BeltFilt_size }}</p>
+<p><strong>Number of units conveyor dryer:</strong> {{ n_units_ConveyorDryer }}</p>
+<p><strong>Size conveyor dryer (area) (m2):</strong> {{ ConveyorDryer_size }}</p>
+
+
+
+
+
+{% endblock %}

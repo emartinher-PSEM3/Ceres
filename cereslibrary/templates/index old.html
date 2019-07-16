@@ -1,0 +1,82 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    {% load static %}
+    <header class="container">
+    <img id="EPA-logo-non-offcial" src="{% static 'images/epa-nonof.jpg' %}" alt="EPA logo non-offcial">
+    <h1 class="logo">Ceres project</h1>
+    </header>
+    
+    <section class="hero container"> 
+    <h2>Description</h2>
+    <p class="description" id="description">Ceres_Filtration_v1. <br/>
+          Tool for selection of nutrients recovery technologies. <br/>
+          Edgar Martín Hernández. <br/>
+          Cincinnati 2019.</p>
+    <h2>Model data</h2>
+    <p>The model has the following statistics:</p>
+    <ul>
+        <li><strong>Technologies considered:</strong> {{ num_tech }}</li>
+        <li><strong>Technologies considered with generation of added value products:</strong> {{ num_techs_wt_product }}</li>
+        <li><strong>Technologies considered with only nutrients removal:</strong> {{ num_techs_wo_product }}</li>
+    </ul>
+    </section>
+    
+    <section class="container">
+    <h2>Technology selection</h2>
+    <p>Open model to select the optimal nutrients recovery technology:</p>
+    
+    <a class="btn btn-input" href="{% url 'userinput' %}" target="_blank">Input data</a>
+    
+    <h2>Contact</h2>
+    <a href="mailto:emartinher@usal.es?subject=Ceres%20Project">Edgar Martin Hernandez</a><!--<br/><br/>-->
+    </section>
+    
+    <footer class="primary-footer container group">
+    <small>US Environmental Prptection Agency</small> <br/>
+    <small>University of Salamanca</small>
+    </footer>
+          
+<!--    <h2 id="user-req">User requierements</h2>
+    <h3 class="user-items" id="economic-item">Economc requirements</h3>-->
+<!--     <button id="budget-but">Budget</button> -->
+<!--     <p id="budget-value"></p> -->
+<!--    <h3>Raw material composition</h3>
+    <ul>
+        <li>Water</li>
+        <li>OM</li>
+        <li>P</li>
+        <li>N</li>
+    </ul>
+    <h2 id="ref">References</h2>
+    <a href="references.html">References</a> -->
+    
+<!--     <script src="scripts/main.js"></script> -->
+{% endblock %}
+<!--  
+  
+  
+  
+  <body>
+      <img id="EPA-logo-non-offcial" src="images/epa-nonof.jpg" alt="EPA logo non-offcial">
+      <h1 class="description">Ceres project</h1>
+      <p class="description" id="description">Ceres_Filtration_v1.
+          Tool for selection of nutrients recovery technologies.
+          Edgar Martín Hernández.
+          Cincinnati 2019.</p>
+      <h2 id="user-req">User requierements</h2>
+      <h3 class="user-items" id="economic-item">Economc requirements</h3>
+      <button id="budget-but">Budget</button>
+      <p id="budget-value"></p>
+      <h3>Raw material composition</h3>
+      <ul>
+          <li>Water</li>
+          <li>OM</li>
+          <li>P</li>
+          <li>N</li>
+      </ul>
+      <h2 id="ref">References</h2>
+      <a href="references.html">References</a> 
+      <script src="scripts/main.js"></script>
+  </body>
+</html>-->

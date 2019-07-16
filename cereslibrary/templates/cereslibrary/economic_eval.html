@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="http://cdn.pydata.org/bokeh/release/bokeh-1.1.0.min.css"/>
+        <link rel="stylesheet" type="text/css" href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.1.0.min.css"/>
+        <link rel="stylesheet" type="text/css" href="http://cdn.pydata.org/bokeh/release/bokeh-tables-1.1.0.min.css"/>        
+    </head>
+    {% load static %}
+
+    <body>
+        <h1>Economic summary</h1>
+        
+        <h2>Nutrient recovery techlonogies costs</h2>
+        {% autoescape off %}{{ economic_results_summary }}{% endautoescape %}
+        
+        {{div_economic_results_summary|safe}}
+        
+        </br>
+        
+        <h2>Economic analysis of diferent topologies</h2>
+        <p>Discount rate (%): {{discount_rate}} </p>
+        {% autoescape off %}{{ NPV_summary }}{% endautoescape %}
+        
+        {{div_NPV_summary|safe}}
+
+
+    </body>
+
+   
+        <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-1.1.0.min.js"></script>
+        <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.1.0.min.js"></script>
+        <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-tables-1.1.0.min.js"></script>
+        <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-api-1.1.0.min.js"></script> 
+        {{script_economic_results_summary|safe}}
+        
+        {{script_NPV_summary|safe}}
+
+</html>

@@ -1,0 +1,65 @@
+<!-- {% extends "base_generic.html" %}
+
+{% block content %}-->
+
+<!--<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href=”http://cdn.pydata.org/bokeh/release/bokeh-1.1.0.min.css" rel=”stylesheet” type=”text/css”>
+        <link href=”http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.1.0.min.css" rel=”stylesheet” type=”text/css”>
+
+        <script src=”http://cdn.pydata.org/bokeh/release/bokeh-1.1.0.min.js"></script>
+        <script src=”http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.1.0.min.js"></script>
+        {{ the_script|safe }}
+    </head>
+    {% load static %}
+
+    <body>
+        <h1>Indicators</h1>
+        
+        <h2>Geografical constraints</h2>
+        
+        <p>The facility is located in the following watershed (HUC8 resolution): {{HUC8ContPoint}} </p>
+
+        <p>
+        <h3>Total phosphorus concentration in watersheds at HUC8 resolution (&#956g/L)</h3> 
+        <p><strong>Total phosphorus concentration in HUC8 {{HUC8ContPoint}} watershed:</strong> {{ TP_GIS }} (&#956g/L)</p>
+        <img id="TP" src="{% static 'images/NARS_NLA_FINAL_P.png' %}" alt="TP" width="683" height="383"/> 
+        </p>
+
+
+        <p>
+        <h3>Ammonia concentration in watersheds at HUC8 resolution (mg/L)</h3> 
+        <p><strong>Ammonia concentration in HUC8 {{HUC8ContPoint}} watershed:</strong> {{ NH4_GIS }} (mg/L)</p>
+        <img id="NH4" src="{% static 'images/NARS_NLA_FINAL_N.png' %}" alt="NH4" width="683" height="383"/> 
+        </p>
+
+        <br/>
+        <p><h3>Phosphorus recovery parameters</h3> </p>
+        {% autoescape off %}{{ resultsP }}{% endautoescape %}
+        
+        <br/>
+        {{ the_div|safe }}
+
+
+    </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href=”http://cdn.pydata.org/bokeh/release/bokeh-1.0.4.min.css" rel=”stylesheet” type=”text/css”>
+        <link href=”http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.1.0.min.css" rel=”stylesheet” type=”text/css”>
+
+        <script src=”http://cdn.pydata.org/bokeh/release/bokeh-1.0.4.min.js"></script>
+        <script src=”http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.1.0.min.js"></script>
+        {{ script | safe }}
+    </head>
+    <body>
+        {{ div | safe }}
+        </body>
+</html>
+
+<!-- {% endblock %} -->
