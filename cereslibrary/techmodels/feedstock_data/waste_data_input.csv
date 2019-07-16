@@ -1,0 +1,13 @@
+Component_long,Component,Concentration
+Water,Wa,94.142
+Organic_matter,OM,5.858
+Carbon,C,2.478
+Nitrogen,N,0.384
+Phosphorus,P,0.059
+Calcium,Ca,0.117
+Potassium,K,0.253
+Rest,Rest,2.567
+NH3_N_ratio,NH3_N_ratio,0.59
+PO4_P_ratio,PO4_P_ratio,0.541
+CaIon_Ca_ratio,Caion_Ca_ratio,0.154
+KIon_K_ratio ,Kion_K_ratio,1

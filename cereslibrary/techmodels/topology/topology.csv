@@ -1,0 +1,9 @@
+,Anaerobic digestion,Screw Press,Filtration,FBR struvite,CSTR struvite
+AD_SP_F,1,1,1,0,0
+AD_SP_FBR,1,1,0,1,0
+AD_SP_CSTR,1,1,0,0,1
+AD_SP,1,1,0,0,0
+SP_F,0,1,1,0,0
+SP_FBR,0,1,0,1,0
+SP_CSTR,0,1,0,0,1
+SP,0,1,0,0,0

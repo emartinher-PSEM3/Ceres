@@ -1,0 +1,9 @@
+Item,Value,
+worked_days,365,
+worked_hours,24,
+salary,53600.5,"#CEU3232500030, bls.gov"
+worked_shifts_week,5,
+worked_weeks_operator,49,
+shifts_day,3,
+plant_lifetime,20,
+discount_rate,0.07,

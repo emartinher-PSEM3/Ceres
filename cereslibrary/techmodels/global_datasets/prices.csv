@@ -1,0 +1,11 @@
+Item,Value,Reference
+P,0.3148,# EUR per kg  357.16 $ / 1000kg Note! Precio de P (?/kg) (ejemplo). Se ha tomado el precio de fertilizante de P http://www.indexmundi.com/commodities/?commodity=dap-fertilizer
+N,0.45,# EUR per kg  http://adlib.everysite.co.uk/adlib/defra/content.aspx?doc=245926&id=246003
+K,0.24,# EUR per kg http://adlib.everysite.co.uk/adlib/defra/content.aspx?doc=245926&id=246003
+struvite,0.85,# USD per kg 763 EUR / 1000kg Economic Feasibility Study for Phosphorus Recovery Processes DOI 10.1007/s13280-010-0101-9
+MgCl2,0.098405,
+NaOH,0.26596,
+CaCO3,0.0842039,
+FeCl3,0.163565,
+electricity,0.11,#*Electricity price USD/kWh #https://www.eia.gov/electricity/monthly/archive/november2018.pdf
+natural_gas,1.7657,#USD/m? #https://www.eia.gov/opendata/qb.php?sdid=NG.N3035US3.M

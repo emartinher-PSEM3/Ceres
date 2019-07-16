@@ -1,0 +1,16 @@
+Parameter,Name,Value,
+digestate_density,digestate_density,0.95,
+digestate_viscosity,digestate_viscosity,0.0009,Pa*s
+Alkalinity,Alk,8770.5,
+pH,pH,7.2,
+VbiogasCS,VbiogasCS,0.35,m3perkg
+wVSCS,wVSCS,0.6,
+Y_CO2,Y_CO2,0.30691,
+Y_CH4,Y_CH4,0.666,
+Y_N2,Y_N2,0.02,
+Y_O2,Y_O2,0.005,
+Y_H2S,Y_H2S,0.002,
+Y_NH3,Y_NH3,9E-05,
+TS,TS,0.08,
+cattle_manure_ratio,cattle_manure_ratio,54.7945205479452,kg/day/animal
+Wa_density,Wa_density,1,
