@@ -96,15 +96,15 @@ class UserInputForm(ModelForm):
         #return self.cleaned_data, discount_rate_clean
         
     def clean_discount_rate(self):
-        custom_discount_rate = self.cleaned_data.get('custom_discount_rate')
+        customized_discount_rate = self.cleaned_data.get('customized_discount_rate')
         discount_rate = self.cleaned_data['discount_rate']
         # conditional field 
 
-        if custom_discount_rate == 'cus':
+        if customized_discount_rate == 'cus':
             if discount_rate == None or discount_rate <= 0 : # discount_rate <= 0:# | discount_rate == None:
                 msg = forms.ValidationError("This field is required. Only positive values")
                 self.add_error('discount_rate', msg)
-        elif custom_discount_rate == 'def':
+        elif customized_discount_rate == 'def':
             if discount_rate != None: # discount_rate <= 0:# | discount_rate == None:
                 msg = forms.ValidationError("If 'Default' selected this field must be null")
                 self.add_error('discount_rate', msg)
@@ -132,7 +132,7 @@ class UserInputForm(ModelForm):
     class Meta:
         model = UserInputData
         #fields = '__all__'
-        fields = ['facility_size', 'longitude', 'latitude', 'manure_composition','AD_decision', 'discharge_mode', 'custom_discount_rate', 'discount_rate']
+        fields = ['facility_size', 'longitude', 'latitude', 'manure_composition','AD_decision', 'discharge_mode', 'customized_discount_rate', 'discount_rate']
         
     #def __init__(self, *args, **kwargs):
         #super(UserInputForm, self).__init__(*args, **kwargs)

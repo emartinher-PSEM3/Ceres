@@ -94,9 +94,9 @@ class Tech(models.Model):
    
 class UserInputData(models.Model):
     facility_size = models.FloatField(default=0, help_text='Enter the number of animals of the facility')
-    longitude = models.FloatField(default=0, help_text='Facility longitude. Partially working')
-    latitude = models.FloatField(default=0, help_text='Facility latitude. Partially working')
-    user_budget = models.FloatField(default=0, help_text='It is not working yet')#'Enter a budget in USD')
+    longitude = models.FloatField(default=0, help_text='Facility longitude')
+    latitude = models.FloatField(default=0, help_text='Facility latitude')
+    user_budget = models.FloatField(default=0, help_text='Enter a budget in USD')
     PRD = (
         ('nop', 'No product'),
         ('str', 'Struvite'),
@@ -119,7 +119,8 @@ class UserInputData(models.Model):
                                           choices = COMP,
                                           default='def',
                                           blank = False,
-                                          help_text='It is not working yet')#'Enter the composition of the manure'          
+                                          #help_text='It is not working yet')#'Enter the composition of the manure'   
+                                          )
                                         
     CROP = (
         ('whe', 'Wheat'),
@@ -157,17 +158,17 @@ class UserInputData(models.Model):
     
     SEL = (
         ('def', 'Default'),
-        ('cus', 'Custom'),
+        ('cus', 'Customized'),
     )
     
-    custom_discount_rate = models.CharField(max_length=3,
+    customized_discount_rate = models.CharField(max_length=3,
                             choices = SEL,
                             blank = False,
                             default='def',
                             help_text='Select discount rate for NPV',
                             )
     
-    discount_rate = models.FloatField(default=None, blank=True, null=True, help_text="(%). Only required if 'Custom discount rate' is selected.")
+    discount_rate = models.FloatField(default=None, blank=True, null=True, help_text="(%). Only required if 'Customized discount rate' is selected.")
     
     def __str__(self):
         """String for representing the Model object."""
