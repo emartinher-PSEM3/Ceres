@@ -62,7 +62,8 @@ def GIS_retrieval_module(latitude, longitude):
     
     pointInPolys = sjoin(point, poly, how='left')
     
-    HUC8ContPoint = float(pointInPolys['HUC_8'])
+    #HUC8ContPoint = float(pointInPolys['HUC_8'])
+    HUC8ContPoint = pointInPolys['HUC_8'].values[0]
          
 #    HUC8_NARS_NLA_FINAL_P  = geopandas.GeoDataFrame.from_file('HUC8_NARS_NLA_FINAL_P/HUC8_NARS_NLA_FINAL_P.shp')
 #    HUC8_NARS_NLA_FINAL_N  = geopandas.GeoDataFrame.from_file('HUC8_NARS_NLA_FINAL_N/HUC8_NARS_NLA_FINAL_N.shp')
