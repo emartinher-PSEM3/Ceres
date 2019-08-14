@@ -53,8 +53,11 @@ def PUptake(HUC8ContPoint, HUC6ContPoint):
     LandCover_Point = LandCover_dfHUC8.loc[HUC8ContPoint]
     AgriCensus_Point = AgriCensus_dfHUC6.loc[HUC6ContPoint]
     
+    # P uptake forest
     Puptake_PFOR = 0.4535924*LandCover_Point['PFOR'].astype(float)/100 * ForestsPlantNutrientUptake.loc['P'].astype(float)/100 * ForestsPlantNutrientUptake.loc['PoundsAcre'].astype(float)
+    # P uptake wetlands
     Puptake_PWETL = LandCover_Point['PWETL'].astype(float)/100 * Wetlands_Preg
+    # P uptake croplands
     Puptake_PAGC= 0.4535924*LandCover_Point['PAGC'].astype(float)/100 * (AgriCensus_Point['Corn'].astype(float)/100 * 
                                              (PlantNutrientUptake_df.loc['Corn','P'].astype(float)/100 * PlantNutrientUptake_df.loc['Corn','PoundsAcre'].astype(float)+
                                              PlantNutrientUptake_df.loc['CornStraw','P'].astype(float)/100 * PlantNutrientUptake_df.loc['CornStraw','PoundsAcre'].astype(float))
@@ -87,7 +90,9 @@ def PUptake(HUC8ContPoint, HUC6ContPoint):
                                              (OtherCropsPlantNutrientUptake.loc['P'].astype(float)/100 * OtherCropsPlantNutrientUptake.loc['PoundsAcre'].astype(float))
                                              )
 
+    # P uptake pasture
     Puptake_PAGP = 0.4535924*LandCover_Point['PAGP'].astype(float)/100 * PasturePlantNutrientUptake.loc['P'].astype(float)/100 * PasturePlantNutrientUptake.loc['PoundsAcre'].astype(float)
+    # P uptake development areas
     Puptake_PDEV = 0.4535924*LandCover_Point['PDEV'].astype(float)/100 * 0
     
     TotalHUC_PUptake = AreaHUC8.loc[HUC8ContPoint, 'AREA_ACRES'].astype(float)*(Puptake_PFOR+Puptake_PWETL+Puptake_PAGC+Puptake_PAGP+Puptake_PDEV)
